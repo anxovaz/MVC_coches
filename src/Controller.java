@@ -23,5 +23,30 @@ public class Controller {
         } else {
             System.out.println("[LOG] Error");
         } ;
+
+        System.out.println("================");
+        while(true) {
+            String[] respuesta = View.menu();
+            if (respuesta[0].compareTo("s") == 0) {
+                System.out.println("Saliendo...");
+                break;
+            }
+            if (respuesta.length == 2) {
+                if (respuesta[0].compareTo("c") == 0) { //coche
+                    miModel.crearCoche("LaFerrari", "SBC 1234");
+                } else if (respuesta[0].compareTo("v") == 0) { //ver velociad
+                    boolean confirmacion = miView.muestraVelocidad("SBC 1234", miModel.getVelocidad("SBC 1234"));
+                    if (confirmacion) {
+                        System.out.println("[LOG] Correcto");
+                    } else {
+                        System.out.println("[LOG] Error");
+                    }
+
+                }
+
+            }
+        }
+
     }
+
 }
