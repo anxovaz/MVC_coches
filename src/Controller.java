@@ -1,5 +1,3 @@
-import java.lang.module.ModuleDescriptor;
-
 public class Controller {
     public static void main(String[] args) {
         // Instanciamos la vista y el modelo
@@ -31,22 +29,25 @@ public class Controller {
                 System.out.println("Saliendo...");
                 break;
             }
-            if (respuesta.length == 2) {
+            if (respuesta.length == 3) {
                 if (respuesta[0].compareTo("c") == 0) { //coche
-                    miModel.crearCoche("LaFerrari", "SBC 1234");
-                } else if (respuesta[0].compareTo("v") == 0) { //ver velociad
-                    boolean confirmacion = miView.muestraVelocidad("SBC 1234", miModel.getVelocidad("SBC 1234"));
-                    if (confirmacion) {
-                        System.out.println("[LOG] Correcto");
-                    } else {
-                        System.out.println("[LOG] Error");
+                    miModel.crearCoche(respuesta[1], respuesta[2]);
+                }
+            }
+                if (respuesta.length == 2) {
+                    if (respuesta[0].compareTo("v") == 0) { //ver velociad
+                        boolean confirmacion = miView.muestraVelocidad(respuesta[1], miModel.getVelocidad(respuesta[1]));
+                        if (confirmacion) {
+                            System.out.println("[LOG] Correcto");
+                        } else {
+                            System.out.println("[LOG] Error");
+                        }
+
                     }
 
                 }
-
             }
         }
 
-    }
 
 }

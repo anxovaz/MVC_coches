@@ -35,7 +35,9 @@ public class View {
         }else if (opcion==2){
             System.out.println("Introduce matricula del coche:");
             String matricula = sc.next();
-            String[] velocidad = {"v",matricula};
+            String matricula2 = sc.next();
+            String matricula3 = matricula + " " + matricula2;
+            String[] velocidad = {"v",matricula3};
 
             return velocidad;
         }else{
