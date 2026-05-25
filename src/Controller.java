@@ -42,26 +42,23 @@ public class Controller {
             }
 
             //CREAR COCHE
-            if (respuesta.length == 3) { //Si son 3 parametros
-                if (respuesta[0].compareTo("c") == 0) { //coche
-                    miModel.crearCoche(respuesta[1], respuesta[2]);
+            if (respuesta[0].compareTo("c") == 0) { //coche
+                miModel.crearCoche(respuesta[1], respuesta[2]);
+            } else if (respuesta[0].compareTo("v") == 0) { //VER VELOCIDAD
+                boolean confirmacion = miView.muestraVelocidad(respuesta[1], miModel.getVelocidad(respuesta[1]));
+                if (confirmacion) {
+                    System.out.println("[LOG] Correcto");
+                } else {
+                    System.out.println("[LOG] Error");
                 }
+            }else{
+                System.out.println("[LOG] ERROR opción incorrecta");
             }
 
-            //VER VELOCIDAD
-            if (respuesta.length == 2) { //Si son 2
-                if (respuesta[0].compareTo("v") == 0) { //ver velociad
-                    boolean confirmacion = miView.muestraVelocidad(respuesta[1], miModel.getVelocidad(respuesta[1]));
-                    if (confirmacion) {
-                            System.out.println("[LOG] Correcto");
-                    } else {
-                            System.out.println("[LOG] Error");
-                    }
 
 
-                }
 
-            }
+
         }
     }
 
