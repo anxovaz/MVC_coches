@@ -21,13 +21,12 @@ public class View {
      */
     public static String[] menu(){ //devuelve true o false en función de si el usuario quiere salir
         Scanner sc = new Scanner(System.in);
+        sc.useDelimiter(System.lineSeparator()); //le indica al escaner que el delimitador va a ser un salto de linea (\n) no un espacio
         System.out.println("Que quieres hacer?\n1.Crear coche\n2.Mostrar Velociada\n3.Salir");
         int opcion = sc.nextInt();
         if(opcion==1) {
             System.out.println("Matrícula:");
             String matricula = sc.next();
-            matricula += " ";
-            matricula += sc.next();
             System.out.println("Modelo:");
             String modelo = sc.next();
             String[] coche = {"c",modelo, matricula};
@@ -35,9 +34,7 @@ public class View {
         }else if (opcion==2){
             System.out.println("Introduce matricula del coche:");
             String matricula = sc.next();
-            String matricula2 = sc.next();
-            String matricula3 = matricula + " " + matricula2;
-            String[] velocidad = {"v",matricula3};
+            String[] velocidad = {"v",matricula};
 
             return velocidad;
         }else{
