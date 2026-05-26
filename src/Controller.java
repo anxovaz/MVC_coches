@@ -38,7 +38,7 @@ public class Controller {
 
             //SALIR
             if (respuesta[0].compareTo("s") == 0) {
-                System.out.println("Saliendo...");
+                miView.mostrar("Saliendo...");
                 break;
             }
 
@@ -48,19 +48,19 @@ public class Controller {
             } else if (respuesta[0].compareTo("v") == 0) { //VER VELOCIDAD
                 boolean confirmacion = miView.muestraVelocidad(respuesta[1], miModel.getVelocidad(respuesta[1]));
                 if (confirmacion) {
-                    System.out.println("[LOG] Correcto");
+                    miView.mostrar("[LOG] Correcto");
                 } else {
-                    System.out.println("[LOG] Error");
+                    miView.mostrar("[LOG] Error");
                 }
             } else if (respuesta[0].compareTo("a")==0) {
                 int nuevaVel = miModel.acelerar(respuesta[1], Integer.parseInt(respuesta[2])); //le pasa la matricula y la nueva velocidad convertida a integer
                 if(nuevaVel == -1){
-                    System.out.println("[LOG] Error, coche no encontrado");
+                    miView.mostrar("[LOG] Error, coche no encontrado");
                 }else{
-                    System.out.println("[LOG] Correcto");
+                    miView.mostrar("[LOG] Correcto");
                 }
             }else{
-                System.out.println("[LOG] ERROR opción incorrecta");
+                miView.mostrar("[LOG] ERROR opción incorrecta");
             }
 
 
