@@ -53,4 +53,12 @@ public class View {
 
 
     }
+
+    /**
+     * Métod0 para mostrar un log del Controller
+     * @param log
+     */
+    public void mostrar(String log){
+        System.out.println(log);
+    }
 }
