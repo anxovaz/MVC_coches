@@ -34,6 +34,15 @@ public class Model {
         return aux;
     }
 
+    public int acelerar(String matricula, int velocidad){
+        Coche coche = this.getCoche(matricula);
+        if(coche == null){ //No se encontró coche
+            return -1;
+        }else{
+            return coche.aumentarVel(velocidad); //aumenta la velocidad y la devuelve
+        }
+    }
+
     /**
      * Cambia la velocidad de un coche
      * @param matricula

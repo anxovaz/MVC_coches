@@ -54,6 +54,11 @@ public class Controller {
                 }
             } else if (respuesta[0].compareTo("a")==0) {
                 int nuevaVel = miModel.acelerar(respuesta[1], Integer.parseInt(respuesta[2])); //le pasa la matricula y la nueva velocidad convertida a integer
+                if(nuevaVel == -1){
+                    System.out.println("[LOG] Error, coche no encontrado");
+                }else{
+                    System.out.println("[LOG] Correcto");
+                }
             }else{
                 System.out.println("[LOG] ERROR opción incorrecta");
             }
