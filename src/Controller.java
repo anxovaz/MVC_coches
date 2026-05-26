@@ -12,7 +12,7 @@ public class Controller {
         // Instanciamos la vista y el modelo
         View miView = new View();
         Model miModel = new Model();
-
+/*
         // Crear tres coches
         miModel.crearCoche("LaFerrari", "SBC 1234");
         miModel.crearCoche("Alpine", "HYU 4567");
@@ -32,6 +32,7 @@ public class Controller {
         }
 
         System.out.println("================");
+ */
         while(true) {
             String[] respuesta = View.menu();
 
@@ -51,6 +52,8 @@ public class Controller {
                 } else {
                     System.out.println("[LOG] Error");
                 }
+            } else if (respuesta[0].compareTo("a")==0) {
+                int nuevaVel = miModel.acelerar(resopuesta[1], respuesta[2]);
             }else{
                 System.out.println("[LOG] ERROR opción incorrecta");
             }
