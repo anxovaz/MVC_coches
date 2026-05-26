@@ -41,7 +41,7 @@ public class Controller {
                     miView.mostrar("[LOG] Correcto");
                 }
             }else if(respuesta[0].compareTo("r")==0){
-                int nuevaGasolina = miModel.cargarGasolina(respuesta[1], respuesta[2]);
+                int nuevaGasolina = miModel.cargarGasolina(respuesta[1], Integer.parseInt(respuesta[2])); //le paso matricula y gasolina
                 if (nuevaGasolina == -1){
                     miView.mostrar("[LOG] Error, coche no encontrado");
                 }else{
