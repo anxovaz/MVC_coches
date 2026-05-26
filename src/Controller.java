@@ -45,7 +45,7 @@ public class Controller {
                 if (nuevaGasolina == -1){
                     miView.mostrar("[LOG] Error, coche no encontrado");
                 }else{
-                    miView.mostrar("[LOG] Correcto");
+                    miView.mostrar("[LOG] Correcto,nueva gasolina:" + nuevaGasolina);
                 }
             }else{
                 miView.mostrar("[LOG] ERROR opción incorrecta");
