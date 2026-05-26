@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 /**
  * Clase encargada de la interacción con el usuario
+ *
+ * @author Anxo Vázquez
+ * @version examen
  */
 public class View {
     /**
@@ -17,7 +20,7 @@ public class View {
 
     /**
      * Métod0 menu que muestra un menu
-     * @return
+     * @return Array String[]
      */
     public static String[] menu(){ //devuelve true o false en función de si el usuario quiere salir
         Scanner sc = new Scanner(System.in);
@@ -56,7 +59,7 @@ public class View {
 
     /**
      * Métod0 para mostrar un log del Controller
-     * @param log
+     * @param log String
      */
     public void mostrar(String log){
         System.out.println(log);

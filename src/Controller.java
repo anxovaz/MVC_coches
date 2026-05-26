@@ -1,11 +1,12 @@
 /**
  * Clase Controller
+ *
  * @author Anxo Vázquez
- * @version 1.0
+ * @version examen
  */
 public class Controller {
     /**
-     * Mét0do main que lanza el menu de la view
+     * Mét0do main que lanza el menu de la view, muestra la salida a través de la instancia miView
      * @param args
      */
     public static void main(String[] args) {
