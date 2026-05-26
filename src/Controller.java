@@ -53,7 +53,7 @@ public class Controller {
                     System.out.println("[LOG] Error");
                 }
             } else if (respuesta[0].compareTo("a")==0) {
-                int nuevaVel = miModel.acelerar(resopuesta[1], respuesta[2]);
+                int nuevaVel = miModel.acelerar(respuesta[1], Integer.parseInt(respuesta[2])); //le pasa la matricula y la nueva velocidad convertida a integer
             }else{
                 System.out.println("[LOG] ERROR opción incorrecta");
             }
