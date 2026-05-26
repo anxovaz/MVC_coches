@@ -8,4 +8,14 @@ public class Coche {
         this.matricula = matricula;
         this.velocidad = 0;
     }
+
+    /**
+     * Métod0 aumentarVelocidad que aumenta la velocidad del coche
+     * @param velocidad
+     * @return
+     */
+    public int aumentarVel(int velocidad){
+        this.velocidad+=velocidad;
+        return velocidad;
+    }
 }

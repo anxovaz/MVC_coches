@@ -34,6 +34,12 @@ public class Model {
         return aux;
     }
 
+    /**
+     * Métod0 acelerar que aumenta la velocidad de un coche usanbdo el métod0 Coche.aumentarVel()
+     * @param matricula
+     * @param velocidad
+     * @return
+     */
     public int acelerar(String matricula, int velocidad){
         Coche coche = this.getCoche(matricula);
         if(coche == null){ //No se encontró coche
