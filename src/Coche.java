@@ -32,6 +32,11 @@ public class Coche {
         return this.velocidad;
     }
 
+    /**
+     * Métod0 aumentarGas que aumenta la gasolina del coche
+     * @param gas
+     * @return int nuevaCantidad
+     */
     public int aumentarGas(int gas){
         this.gasolina += gas;
         return this.gasolina;
