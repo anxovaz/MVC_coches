@@ -40,6 +40,13 @@ public class Controller {
                 }else{
                     miView.mostrar("[LOG] Correcto");
                 }
+            }else if(respuesta[0].compareTo("r")==0){
+                int nuevaGasolina = miModel.cargarGasolina(respuesta[1], respuesta[2]);
+                if (nuevaGasolina == -1){
+                    miView.mostrar("[LOG] Error, coche no encontrado");
+                }else{
+                    miView.mostrar("[LOG] Correcto");
+                }
             }else{
                 miView.mostrar("[LOG] ERROR opción incorrecta");
             }
