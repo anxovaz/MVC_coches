@@ -15,11 +15,11 @@ public class Coche {
      * @param modelo
      * @param matricula
      */
-    public Coche(String modelo, String matricula) { //para simplioficar no pido gasolina a la hora de instanciar Coche y la inicializo a 0
+    public Coche(String modelo, String matricula) { //para simplioficar no pido gasolina a la hora de instanciar Coche y la inicializo a 100
         this.modelo = modelo;
         this.matricula = matricula;
         this.velocidad = 0;
-        this.gasolina = 0; //inicializa gasolina a 0
+        this.gasolina = 100; //inicializa gasolina a 100
     }
 
     /**
@@ -29,6 +29,8 @@ public class Coche {
      */
     public int aumentarVel(int vel){
         this.velocidad+=vel;
+        //la relación para quitar gasolina al acelerar decido que es +1km/h = -1 gasolina
+        this.gasolina-=vel; //descuento gasolina ya que el usaurio aceleró el coche (consumo)
         return this.velocidad;
     }
 
