@@ -43,4 +43,14 @@ public class Coche {
         this.gasolina += gas;
         return this.gasolina;
     }
+
+    /**
+     * Métod0 aumentarVelocidad que aumenta la velocidad del coche
+     * @param velocidad
+     * @return velocidad int
+     */
+    public int aumentarVel(int velocidad){
+        this.velocidad+=velocidad;
+        return velocidad;
+    }
 }
